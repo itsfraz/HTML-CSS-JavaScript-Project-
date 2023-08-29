@@ -14,14 +14,14 @@ document.addEventListener("mousemove", function (event) {
     blur.style.top = event.clientY - 250 + "px"; // Set the top position with an offset
 });
 var h4all = document.querySelectorAll("#nav h4")
-h4all.forEach(function(elem){
-    elem.addEventListener("mouseenter",function(){
+h4all.forEach(function (elem) {
+    elem.addEventListener("mouseenter", function () {
         crsr.style.scale = 3
         crsr.style.border = "0.5px solid #fff"
         crsr.style.backgroundColor = "transparent"
 
     })
-    elem.addEventListener("mouseleave",function(){
+    elem.addEventListener("mouseleave", function () {
         crsr.style.scale = 1
         crsr.style.border = "0px solid #99cd32bc"
         crsr.style.backgroundColor = "#99cd32bc"
@@ -89,34 +89,42 @@ gsap.to("#main", {
 });
 
 
-gsap.from("#about-us img ,#about-us-in",{
-    y:90,
-    opacity:0,
-    duration:1,
-    // stagger:0.4,
-    scrollTrigger:{
-        trigger:"#about-us",
-        scroller:"body",
-        //markers:true,
-        start:"top 70%",
-        end:"top 65%",
-        scrub: 2
+// Using GSAP to animate elements within the "about-us" section
+gsap.from("#about-us img, #about-us-in", {
+    // Initial position and opacity values for the animation
+    y: 90,          // Move elements down by 90 pixels
+    opacity: 0,     // Set initial opacity to fully transparent
+    duration: 1,    // Animation duration is 1 second
 
+    // Scroll-triggered animation settings
+    scrollTrigger: {
+        trigger: "#about-us",  // The trigger element for the animation
+        scroller: "body",      // The scrolling container (body in this case)
+
+        // Animation timeline markers (helpful for debugging)
+        // markers: true,
+
+        start: "top 70%",      // Animation starts when trigger is 70% from the top of the viewport
+        end: "top 65%",        // Animation ends when trigger is 65% from the top of the viewport
+
+        scrub: 2               // Slow down animation playback by a factor of 2 during scrolling
     }
 });
 
-gsap.from(".card",{
-    scale : 0.8,
-    opacity:0,
-    duration:1,
-    // stagger:0.4,
-    scrollTrigger:{
-        trigger:".card",
-        scroller:"body",
-        //markers:true,
-        start:"top 70%",
-        end:"top 65%",
-        scrub: 2
 
+// Using GSAP animation library to create an animation effect for elements with class "card"
+gsap.from(".card", {
+    // Initial properties of the animation
+    scale: 0.8,         // Start with 80% of the original size
+    opacity: 0,         // Start with 0% opacity (completely transparent)
+    duration: 1,        // Duration of the animation in seconds
+    
+    // Scroll-triggered animation settings
+    scrollTrigger: {
+        trigger: ".card",       // Element that triggers the animation
+        scroller: "body",       // The scrollable element (usually the body in this case)
+        start: "top 70%",      // Animation starts when the top of the element is 70% in view
+        end: "top 65%",        // Animation ends when the top of the element is 65% in view
+        scrub: 2               // "Scrub" the animation, adjusting its progress based on scroll speed
     }
-})
+});
