@@ -118,7 +118,7 @@ gsap.from(".card", {
     scale: 0.8,         // Start with 80% of the original size
     opacity: 0,         // Start with 0% opacity (completely transparent)
     duration: 1,        // Duration of the animation in seconds
-    
+    stagger : 0.2,
     // Scroll-triggered animation settings
     scrollTrigger: {
         trigger: ".card",       // Element that triggers the animation
@@ -128,3 +128,30 @@ gsap.from(".card", {
         scrub: 2               // "Scrub" the animation, adjusting its progress based on scroll speed
     }
 });
+
+gsap.from("#colon1",{
+    y:-70,
+    x:-70,
+    scrollTrigger:{
+        trigger:"#colon1",
+        scroller:"body",
+       // markers:true,
+        start:"top 50%",
+        end:"top 45%",
+        scrub:4
+    }
+});
+
+gsap.from("#colon2",{
+    y:70,
+    x:70,
+    scrollTrigger:{
+        trigger:"#colon1",
+        scroller:"body",
+       // markers:true,
+        start:"top 50%",
+        end:"top 45%",
+        scrub:4
+    }
+});
+
