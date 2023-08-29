@@ -115,7 +115,7 @@ gsap.from(".card",{
         scroller:"body",
         //markers:true,
         start:"top 70%",
-        end:"top 60%",
+        end:"top 65%",
         scrub: 2
 
     }
