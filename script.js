@@ -81,7 +81,7 @@ gsap.to("#main", {
         // Setting up a scroll trigger for the animation
         trigger: "#main",   // The element that triggers the animation
         scroller: "body",   // The scrolling container (in this case, the whole body)
-        markers: true,      // Displaying markers for the trigger's start and end positions
+        //markers: true,      // Displaying markers for the trigger's start and end positions
 
         // The animation starts when the top of the trigger element is 30% visible from the top of the viewport
         start: "top -30%",
@@ -125,7 +125,7 @@ gsap.from(".card", {
     scale: 0.8,         // Start with 80% of the original size
     opacity: 0,         // Start with 0% opacity (completely transparent)
     duration: 1,        // Duration of the animation in seconds
-    stagger : 0.2,
+    //stagger : 0.4,
     // Scroll-triggered animation settings
     scrollTrigger: {
         trigger: ".card",       // Element that triggers the animation
@@ -144,7 +144,7 @@ gsap.from("#colon1",{
         scroller:"body",
        // markers:true,
         start:"top 50%",
-        end:"top 45%",
+        end:"top 40%",
         scrub:4
     }
 });
