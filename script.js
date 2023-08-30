@@ -143,7 +143,7 @@ gsap.from("#colon1",{
         trigger:"#colon1",
         scroller:"body",
        // markers:true,
-        start:"top 50%",
+        start:"top 40%",
         end:"top 40%",
         scrub:4
     }
@@ -156,9 +156,20 @@ gsap.from("#colon2",{
         trigger:"#colon1",
         scroller:"body",
        // markers:true,
-        start:"top 50%",
+        start:"top 40%",
         end:"top 45%",
         scrub:4
     }
 });
+gsap.from("#page4 h1",{
+    y:50,
+    scrollTrigger:{
+        trigger:"#page4 h1",
+        scroller:"body",
+       // markers:true,
+        start:"top 75%",
+        end:"top 70%",
+        scrub:2
+    }
+})
 
