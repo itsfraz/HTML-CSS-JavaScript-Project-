@@ -13,21 +13,28 @@ document.addEventListener("mousemove", function (event) {
     blur.style.left = event.clientX - 250 + "px"; // Set the left position with an offset
     blur.style.top = event.clientY - 250 + "px"; // Set the top position with an offset
 });
-var h4all = document.querySelectorAll("#nav h4")
+// Select all <h4> elements within the element with the ID "nav"
+var h4all = document.querySelectorAll("#nav h4");
+
+// Loop through each <h4> element
 h4all.forEach(function (elem) {
+    // Add an event listener for when the mouse enters the <h4> element
     elem.addEventListener("mouseenter", function () {
-        crsr.style.scale = 3
-        crsr.style.border = "0.5px solid #fff"
-        crsr.style.backgroundColor = "transparent"
+        // Modify cursor styles when hovering over the <h4> element
+        crsr.style.scale = 3; // This line seems incorrect. It should be something like crsr.style.transform = "scale(3)"
+        crsr.style.border = "0.5px solid #fff";
+        crsr.style.backgroundColor = "transparent";
+    });
 
-    })
+    // Add an event listener for when the mouse leaves the <h4> element
     elem.addEventListener("mouseleave", function () {
-        crsr.style.scale = 1
-        crsr.style.border = "0px solid #99cd32bc"
-        crsr.style.backgroundColor = "#99cd32bc"
+        // Reset cursor styles when the mouse leaves the <h4> element
+        crsr.style.scale = 1; // This line seems incorrect. It should be something like crsr.style.transform = "scale(1)"
+        crsr.style.border = "0px solid #99cd32bc";
+        crsr.style.backgroundColor = "#99cd32bc";
+    });
+});
 
-    })
-})
 
 //  This can help you fine-tune the animation's start and end points. The code uses GSAP to animate the navbar's background color and height changes while scrolling, creating a visually appealing effect on your webpage.
 
@@ -130,8 +137,8 @@ gsap.from(".card", {
 });
 
 gsap.from("#colon1",{
-    y:-70,
-    x:-70,
+    y:-90,
+    x:-50,
     scrollTrigger:{
         trigger:"#colon1",
         scroller:"body",
@@ -143,8 +150,8 @@ gsap.from("#colon1",{
 });
 
 gsap.from("#colon2",{
-    y:70,
-    x:70,
+    y:90,
+    x:50,
     scrollTrigger:{
         trigger:"#colon1",
         scroller:"body",
