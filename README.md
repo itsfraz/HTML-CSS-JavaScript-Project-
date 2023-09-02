@@ -1,2 +1,2 @@
 # HTML-CSS-JavaScript-Project-
-This is a web project using html css javascript . best view in computer browser not applicable for mobile phone view 
+"This web project is designed for optimal viewing on computer browsers and is not optimized for mobile phone displays."
